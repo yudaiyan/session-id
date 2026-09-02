@@ -20,15 +20,34 @@ So the agent now sees `Session ID: ses_...` in its system prompt on every turn. 
 
 ## Install
 
-Add to `~/.config/opencode/opencode.jsonc`:
+### Git dependency
+
+This fork is packaged so OpenCode can install it directly from a fixed Git tag:
 
 ```jsonc
-"plugin": [
-  "oh-my-opencode-slim",
-  "./scripts/vision-gate/index.mjs",
-  "./scripts/session-id/index.mjs"
-]
+// ~/.config/opencode/opencode.json
+{
+  "plugin": [
+    "@yudaiyan/opencode-session-id@git+https://github.com/yudaiyan/session-id.git#v0.1.0"
+  ]
+}
 ```
+
+Use a tag or commit hash rather than tracking `main`, so all sessions use a reproducible plugin version.
+
+### Local checkout
+
+For local development, point OpenCode to the plugin entry file:
+
+```jsonc
+{
+  "plugin": [
+    "file:///absolute/path/to/session-id/index.mjs"
+  ]
+}
+```
+
+After changing the plugin list, quit and restart OpenCode. Plugins are loaded only during startup.
 
 ## Caveat
 

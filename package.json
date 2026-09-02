@@ -1,0 +1,29 @@
+{
+  "name": "@yudaiyan/opencode-session-id",
+  "version": "0.1.0",
+  "description": "OpenCode plugin that injects the current session ID into agent context and exposes get_session_id.",
+  "type": "module",
+  "main": "./index.mjs",
+  "files": [
+    "index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.18.25"
+  },
+  "scripts": {
+    "test": "node test/package-contract.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudaiyan/session-id.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "session-id",
+    "agent-context"
+  ]
+}
