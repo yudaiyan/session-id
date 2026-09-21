@@ -1,7 +1,7 @@
 {
   "name": "@yudaiyan/opencode-session-id",
-  "version": "0.1.0",
-  "description": "OpenCode plugin that injects the current session ID into agent context and exposes get_session_id.",
+  "version": "0.2.0",
+  "description": "OpenCode plugin that injects the current session ID into agent context and exposes get_session_id. Supports OpenCode 2 and OpenCode 1.18.29+.",
   "type": "module",
   "main": "./index.mjs",
   "files": [
@@ -10,7 +10,7 @@
     "LICENSE"
   ],
   "peerDependencies": {
-    "@opencode-ai/plugin": ">=1.18.25"
+    "@opencode-ai/plugin": ">=1.18.29"
   },
   "scripts": {
     "test": "node test/package-contract.mjs"
